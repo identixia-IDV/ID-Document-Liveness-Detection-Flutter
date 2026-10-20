@@ -1,0 +1,262 @@
+# ID-Document-Recognition-Liveness-Detection-Flutter — Flutter plugin + example
+# (plugin root = publishable package; example/ = demo app)
+
+
+# ---------------------------------------------------------------------------
+# OS / editors
+# ---------------------------------------------------------------------------
+.DS_Store
+*.swp
+*.swo
+*~
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.classpath
+*.project
+*.settings/
+
+
+# ---------------------------------------------------------------------------
+# Dart / Flutter (plugin + example)
+# ---------------------------------------------------------------------------
+**/.dart_tool/
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/doc/api/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/build/
+**/coverage/
+.widget_preview/
+
+
+# Plugin packages should not commit pubspec.lock (Dart library convention).
+# Keep example/pubspec.lock for reproducible demo builds.
+/pubspec.lock
+
+
+# ---------------------------------------------------------------------------
+# Android
+# ---------------------------------------------------------------------------
+**/local.properties
+**/.gradle/
+**/captures/
+**/.cxx/
+**/*.apk
+**/*.aab
+**/gradle-wrapper.jar
+**/GeneratedPluginRegistrant.java
+**/GeneratedPluginRegistrant.kt
+
+
+# Signing — never commit secrets
+**/key.properties
+**/*.keystore
+**/*.jks
+!**/debug.keystore
+
+
+# ---------------------------------------------------------------------------
+# iOS / Xcode / CocoaPods
+# ---------------------------------------------------------------------------
+**/Pods/
+**/DerivedData/
+**/*.xcuserstate
+**/xcuserdata/
+**/*.mode1v3
+**/*.mode2v3
+**/*.pbxuser
+**/*.perspectivev3
+!**/*.default.mode1v3
+!**/*.default.mode2v3
+!**/*.default.pbxuser
+!**/*.default.perspectivev3
+**/*sync/
+.sconsign.dblite
+
+
+example/ios/.symlinks/
+example/ios/Flutter/Flutter.podspec
+example/ios/Flutter/Generated.xcconfig
+example/ios/Flutter/flutter_export_environment.sh
+example/ios/Flutter/ephemeral/
+example/ios/Flutter/App.framework
+example/ios/Flutter/Flutter.framework
+example/ios/Flutter/app.flx
+example/ios/Flutter/app.zip
+example/ios/Flutter/flutter_assets/
+example/ios/Flutter/.last_build_id
+example/ios/ServiceDefinitions.json
+example/ios/Runner/GeneratedPluginRegistrant.*
+
+
+# ---------------------------------------------------------------------------
+# Identixia native runtimes (download from Drive — not on GitHub)
+# Keep README placeholders and header stubs if present.
+# ---------------------------------------------------------------------------
+*.aar
+example/android/libdocumentlivenesssdk/**/*.aar
+example/android/libdocumentlivenesssdk/**/*.so
+android/libs/**/*.aar
+ios/Frameworks/**/*.framework/**
+ios/Frameworks/**/*.xcframework/**
+!ios/Frameworks/README.md
+!ios/Frameworks/documentlivenesssdk.framework/Headers/
+!ios/Frameworks/documentlivenesssdk.framework/Modules/
+!ios/Frameworks/documentlivenesssdk.framework/Info.plist
+# SwiftPM copy of xcframework (synced from ios/Frameworks by bootstrap / pod install)
+ios/document_reader_sdk/Frameworks/**/*.xcframework/**
+
+
+# ---------------------------------------------------------------------------
+# Misc generated / local
+# ---------------------------------------------------------------------------
+*.log
+*.class
+*.pyc
+app.*.symbols
+app.*.map.json
+example/android/app/debug/
+example/android/app/profile/
+example/android/app/release/
+**/kotlin/sessions/
+**/.kotlin/
+
+# Engine / model packs (Drive or prepare output — never push)
+*.fpk
+*.xdb
+*.enc
+*.onnx
+*.db
+
+# =============================================================================
+# Identixia runtime / build binaries — never push to customer GitHub git history.
+# GitHub Release assets (v1.0.0 zips / AAR) are uploaded separately with
+# `gh release` from local disk and are NOT affected by these rules.
+# =============================================================================
+
+# Model packs / ML artifacts
+*.fpk
+*.xdb
+*.enc
+*.onnx
+*.db
+*.dat
+
+# Native / package engines
+*.aar
+*.so
+*.dll
+*.dylib
+*.lib
+*.exp
+*.pdb
+*.exe
+!gradle/wrapper/gradle-wrapper.jar
+
+# Mobile / desktop packages produced by local builds
+*.apk
+*.ap_
+*.aab
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Downloaded Release zips / fetch caches (Gradle / CocoaPods / hooks)
+.identixia/
+**/identixia-fetch/
+**/identixia-maven/
+**/facerecognitionsdk-android.zip
+**/facerecognitionsdk-ios.zip
+**/documentrecognitionsdk*.zip
+**/*-android.zip
+**/*-ios.zip
+
+# Linux / Windows / Docker engine trees (placeholders stay)
+lib/cpu/**
+lib/gpu/**
+!lib/cpu/
+!lib/gpu/
+!lib/**/.gitkeep
+!lib/**/README.md
+!lib/README.md
+
+# Android engine modules (AAR + packs + extracted JNI)
+libfacesdk/**/*.aar
+libfacesdk/**/*.so
+libfacesdk/**/*.xdb
+libfacesdk/**/jniLibs/**
+libfacesdk/databases/**
+!libfacesdk/**/.gitkeep
+!libfacesdk/README.md
+!libfacesdk/build.gradle
+!libfacesdk/build.gradle.kts
+libdocumentlivenesssdk/**/*.aar
+libdocumentlivenesssdk/**/*.so
+libdocumentlivenesssdk/**/*.xdb
+libdocumentlivenesssdk/**/jniLibs/**
+!libdocumentlivenesssdk/**/.gitkeep
+!libdocumentlivenesssdk/README.md
+!libdocumentlivenesssdk/build.gradle
+!libdocumentlivenesssdk/build.gradle.kts
+**/jniLibs/**/*.so
+**/jniLibs/**/*.dylib
+
+# iOS / Cordova / Capacitor / RN framework binaries (keep stubs)
+**/Frameworks/**/*.framework/**
+**/Frameworks/**/*.xcframework/**
+!**/Frameworks/README.md
+!**/Frameworks/**/*.framework/Headers/
+!**/Frameworks/**/*.framework/Modules/
+!**/Frameworks/**/*.framework/Info.plist
+!**/Frameworks/**/*.framework/**/*.h
+!**/Frameworks/**/*.framework/**/*.modulemap
+!**/Frameworks/**/*.framework/**/*.xcprivacy
+!**/Frameworks/**/*.framework/**/PrivacyInfo.xcprivacy
+
+# Staged example assets copied from packs
+**/assets/**/*.xdb
+**/assets/**/*.aar
+**/src/main/assets/**/*.xdb
+
+# Smoke / local capture junk
+**/_smoke.png
+**/flutter-*-smoke.png
+**/captures/
+
+# License / activation material
+license.lic
+license.dat
+activation.dat
+*.fp1
+keystore.properties
+*.jks
+*.keystore
+!**/debug.keystore
+
+# Flutter extras
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+android/libs/**/*.aar
+android/libs/**/*.xdb
+android/libs/databases/
+example/android/libfacesdk/**/*.aar
+example/android/libfacesdk/**/*.so
+example/android/libfacesdk/**/*.xdb
+example/android/libdocumentlivenesssdk/**/*.aar
+example/android/libdocumentlivenesssdk/**/*.xdb

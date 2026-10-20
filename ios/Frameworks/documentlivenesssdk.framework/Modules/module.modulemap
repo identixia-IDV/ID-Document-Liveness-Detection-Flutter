@@ -1,0 +1,5 @@
+framework module documentlivenesssdk {
+  umbrella header "DocumentLivenessSDK.h"
+  export *
+  module * { export * }
+}
